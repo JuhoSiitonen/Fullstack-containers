@@ -1,0 +1,212 @@
+Script started on 2023-12-22 02:40:05+02:00 [TERM="xterm-256color" TTY="/dev/pts/10" COLUMNS="88" LINES="17"]
+[?2004h]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database npm run dev[C[C[26P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ [7Pnpm install
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CMONGO_URL=mongodb://localhost:3456/the_database npm run dev[C[C[26@the_username:the_password@[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker exec -it to do-backend-mongo-1 bash
+[?2004l[?2004hroot@b533fed2602f:/# mongosh -root -p example
+[?2004lError:   [1m[31mError parsing command line: unrecognized option:[0m [1m-root[0m
+        
+  [1m$ mongosh [options] [db address] [file names (ending in .js or .mongodb)][0m
+
+  [1m[33mOptions:[0m
+
+    -h, --help                                 Show this usage information
+    -f, --file [arg]                           Load the specified mongosh script
+        --host [arg]                           Server to connect to
+        --port [arg]                           Port to connect to
+        --build-info                           Show build information
+        --version                              Show version information
+        --quiet                                Silence output from the shell during the connection process
+        --shell                                Run the shell after executing files
+        --nodb                                 Don't connect to mongod on startup - no 'db address' [arg] expected
+        --norc                                 Will not run the '.mongoshrc.js' file on start up
+        --eval [arg]                           Evaluate javascript
+        --json[=canonical|relaxed]             Print result of --eval as Extended JSON, including errors
+        --retryWrites[=true|false]             Automatically retry write operations upon transient network errors (Default: true)
+
+  [1m[33mAuthentication Options:[0m
+
+    -u, --username [arg]                       Username for authentication
+    -p, --password [arg]                       Password for authentication
+        --authenticationDatabase [arg]         User source (defaults to dbname)
+        --authenticationMechanism [arg]        Authentication mechanism
+        --awsIamSessionToken [arg]             AWS IAM Temporary Session Token ID
+        --gssapiServiceName [arg]              Service name to use when authenticating using GSSAPI/Kerberos
+        --sspiHostnameCanonicalization [arg]   Specify the SSPI hostname canonicalization (none or forward, available on Windows)
+        --sspiRealmOverride [arg]              Specify the SSPI server realm (available on Windows)
+
+  [1m[33mTLS Options:[0m
+
+        --tls                                  Use TLS for all connections
+        --tlsCertificateKeyFile [arg]          PEM certificate/key file for TLS
+        --tlsCertificateKeyFilePassword [arg]  Password for key in PEM file for TLS
+        --tlsCAFile [arg]                      Certificate Authority file for TLS
+        --tlsAllowInvalidHostnames             Allow connections to servers with non-matching hostnames
+        --tlsAllowInvalidCertificates          Allow connections to servers with invalid certificates
+        --tlsCertificateSelector [arg]         TLS Certificate in system store (Windows and macOS only)
+        --tlsCRLFile [arg]                     Specifies the .pem file that contains the Certificate Revocation List
+        --tlsDisabledProtocols [arg]           Comma separated list of TLS protocols to disable [TLS1_0,TLS1_1,TLS1_2]
+        --tlsUseSystemCA                       Load the operating system trusted certificate list
+        --tlsFIPSMode                          Enable the system TLS library's FIPS mode
+
+  [1m[33mAPI version options:[0m
+
+        --apiVersion [arg]                     Specifies the API version to connect with
+        --apiStrict                            Use strict API version mode
+        --apiDeprecationErrors                 Fail deprecated commands for the specified API version
+
+  [1m[33mFLE Options:[0m
+
+        --awsAccessKeyId [arg]                 AWS Access Key for FLE Amazon KMS
+        --awsSecretAccessKey [arg]             AWS Secret Key for FLE Amazon KMS
+        --awsSessionToken [arg]                Optional AWS Session Token ID
+        --keyVaultNamespace [arg]              database.collection to store encrypted FLE parameters
+        --kmsURL [arg]                         Test parameter to override the URL of the KMS endpoint
+
+  [1m[33mDB Address Examples:[0m
+
+        foo                                    Foo database on local machine
+        192.168.0.5/foo                        Foo database on 192.168.0.5 machine
+        192.168.0.5:9999/foo                   Foo database on 192.168.0.5 machine on port 9999
+        mongodb://192.168.0.5:9999/foo         Connection string URI can also be used
+
+  [1m[33mFile Names:[0m
+
+        A list of files to run. Files must end in .js and will exit after unless --shell is specified.
+
+  [1m[33mExamples:[0m
+
+        Start mongosh using 'ships' database on specified connection string:
+        [1m[32m$ mongosh mongodb://192.168.0.5:9999/ships[0m
+
+  [1mFor more information on usage:[0m [1m[32mhttps://docs.mongodb.com/mongodb-shell[0m.
+[?2004hroot@b533fed2602f:/# mongosh -root -p example[1P[1@-[1@i[1P[1@u[1@ 
+[?2004l]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	6584db3ccc49f24255b97b7e
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1[0m
+Using MongoDB:		7.0.4
+[1m[33mUsing Mongosh[0m:		2.1.1
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the [1mdisableTelemetry()[0m command.
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2023-12-21T23:55:23.988+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2023-12-21T23:55:25.239+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'
+   2023-12-21T23:55:25.239+00:00: vm.max_map_count is too low
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         92.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   72.00 KiB
+[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId([32m'6584d06ad9f4f361dc3cdbf8'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'6584d06ad9f4f361dc3cdbf9'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  { _id: ObjectId([32m'6584d7069818cf228f38f27c'[39m), done: [33mfalse[39m, __v: [33m0[39m },
+  { _id: ObjectId([32m'6584d73e9818cf228f38f27f'[39m), done: [33mfalse[39m, __v: [33m0[39m },
+  { _id: ObjectId([32m'6584d7509818cf228f38f281'[39m), done: [33mfalse[39m, __v: [33m0[39m },
+  {
+    _id: ObjectId([32m'6584d7a09818cf228f38f284'[39m),
+    text: [32m'I putted it in there'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.the_database.insertOne( { text[33mtext[39m: ![1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [50G[32m"[39m[32mt[39m[32me[39m[32ms[39m[32mt[39m[32mi[39m[32mn[39m[32mg[39m[32ms[39m [32mt[39m[32me[39m[32ms[39m[32mt[39m[32mi[39m[32mn[39m[32mg[39m[32ms[39m[32m,[39m [32md[39m[32mi[39m[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings, d[39m[71G[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings, [39m[70G[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings,[39m[69G[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings[39m[68G[32m"[39m, d[36mdo[39mdone: truw[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: tru[80G[33mtrue[39m } =[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } [84G([1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } [84G);
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'6584dc07cc49f24255b97b7f'[39m)
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[86G[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId([32m'6584d06ad9f4f361dc3cdbf8'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'6584d06ad9f4f361dc3cdbf9'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  { _id: ObjectId([32m'6584d7069818cf228f38f27c'[39m), done: [33mfalse[39m, __v: [33m0[39m },
+  { _id: ObjectId([32m'6584d73e9818cf228f38f27f'[39m), done: [33mfalse[39m, __v: [33m0[39m },
+  { _id: ObjectId([32m'6584d7509818cf228f38f281'[39m), done: [33mfalse[39m, __v: [33m0[39m },
+  {
+    _id: ObjectId([32m'6584d7a09818cf228f38f284'[39m),
+    text: [32m'I putted it in there'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  }
+]
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.find({})[32G[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[86G[1G[0Jthe_database> db.todos.find({})[32G[1G[0Jthe_database> show collections[31G
+[1mthe_database[0m
+[1mtodos[0m
+[1G[0Jthe_database> [15G[1G[0Jthe_database> show collections[31G[1G[0Jthe_database> db.todos.find({})[32G[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[86G[1D[1D[1G[0Jthe_database> db.the_database.insertOne[44m([49m { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[84G[1D[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[83G[1D[1G[0Jthe_database> db.the_database.insertOne( [44m{[49m [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[82G[1D[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[81G[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [44m[32m"[49mtestings testings"[39m, [33mdone[39m: [33mtrue[39m } );[68G[1D[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[67G[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings[44m"[39m[49m, [33mdone[39m: [33mtrue[39m } );[50G[1D[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[49G[1D[1D[1D[1D[1D[1D[1D[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m [44m}[49m );[42G[1D[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[41G[1D[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } [44m)[49m;[40G[1D[1G[0Jthe_database> db.the_database.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[39G[1D[1D[1D[1D[1D[1D[1D[1D[1D[1G[0Jthe_database> db.the_databas.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[29G[1G[0Jthe_database> db.the_databa.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[28G[1G[0Jthe_database> db.the_datab.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[27G[1G[0Jthe_database> db.the_data.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[26G[1G[0Jthe_database> db.the_dat.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[25G[1G[0Jthe_database> db.the_da.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[24G[1G[0Jthe_database> db.the_d.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[23G[1G[0Jthe_database> db.the_.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[22G[1G[0Jthe_database> db.the.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[21G[1G[0Jthe_database> db.th.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[20G[1G[0Jthe_database> db.t.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[19G[1G[0Jthe_database> db..insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[18G[1G[0Jthe_database> db.t.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[19G[1G[0Jthe_database> db.to.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[20G[1G[0Jthe_database> db.tod.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[21G[1G[0Jthe_database> db.todo.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[22G[1G[0Jthe_database> db.todos.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[23G[56C
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'6584dc2fcc49f24255b97b80'[39m)
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne( { [33mtext[39m: [32m"testings testings"[39m, [33mdone[39m: [33mtrue[39m } );[79G[1G[0Jthe_database> show collections[31G[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId([32m'6584d06ad9f4f361dc3cdbf8'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'6584d06ad9f4f361dc3cdbf9'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  { _id: ObjectId([32m'6584d7069818cf228f38f27c'[39m), done: [33mfalse[39m, __v: [33m0[39m },
+  { _id: ObjectId([32m'6584d73e9818cf228f38f27f'[39m), done: [33mfalse[39m, __v: [33m0[39m },
+  { _id: ObjectId([32m'6584d7509818cf228f38f281'[39m), done: [33mfalse[39m, __v: [33m0[39m },
+  {
+    _id: ObjectId([32m'6584d7a09818cf228f38f284'[39m),
+    text: [32m'I putted it in there'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId([32m'6584dc2fcc49f24255b97b80'[39m),
+    text: [32m'testings testings'[39m,
+    done: [33mtrue[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit
+[?2004hroot@b533fed2602f:/# exit
+[?2004lexit
+[?2004h]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ docker exec -it todo-backend-mongo-1 bash[C[C[C[A]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cscript exercise12_ 11.txt
+[?2004lScript started, output log file is 'exercise12_11.txt'.
+[?2004h]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database npm run dev[C[C[26P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ [7Pnpm install
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd tehtavat/Fullstack-containers/todo-app/todo-backend/[A]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ [7Pnpm install
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CMONGO_URL=mongodb://localhost:3456/the_database npm run dev[C[C[26@the_username:the_password@[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CMONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database npm run dev[C[C[26P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ [7Pnpm install
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd tehtavat/Fullstack-containers/todo-app/todo-backend/[A]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ docker kill todo-ba[C[Cend[K[A]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ [C[C[C[C[C[C[Ccompose -f docker-compose.dev.yml up[K up[A]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ [C[C[C[C[C[C[Ckill todo-backend[K[A]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ cd tehtavat/Fullsta[C[C-containers/todo-app/todo-backend/[A]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ [7Pnpm install
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CMONGO_URL=mongodb://localhost:3456/the_database npm run dev[C[C[26@the_username:the_password@[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocer [K[K[Kker exec -it to do-backend-redis-1 bash
+[?2004l[?2004hroot@349efd028b12:/data# redis CLI      -cli  
+[?2004l127.0.0.1:6379> [0K127.0.0.1:6379> K[17C[0K127.0.0.1:6379> KE[18C[0K127.0.0.1:6379> KEY[19C[0K127.0.0.1:6379> KEYS[20C[0K127.0.0.1:6379> KEYS [0;90;49mpattern[0m[21C[0K127.0.0.1:6379> KEYS *[0;90;49m pattern[0m[22C[0K127.0.0.1:6379> KEYS *[22C
+1) "todoCount"
+127.0.0.1:6379> [0K127.0.0.1:6379> G[17C[0K127.0.0.1:6379> GE[18C[0K127.0.0.1:6379> GET[19C[0K127.0.0.1:6379> GET [0;90;49mkey[0m[20C[0K127.0.0.1:6379> GET t[0;90;49m key[0m[21C[0K127.0.0.1:6379> GET to[0;90;49m key[0m[22C[0K127.0.0.1:6379> GET tod[0;90;49m key[0m[23C[0K127.0.0.1:6379> GET todo[0;90;49m key[0m[24C[0K127.0.0.1:6379> GET todoC[0;90;49m key[0m[25C[0K127.0.0.1:6379> GET todoCo[0;90;49m key[0m[26C[0K127.0.0.1:6379> GET todoCou[0;90;49m key[0m[27C[0K127.0.0.1:6379> GET todoCoun[0;90;49m key[0m[28C[0K127.0.0.1:6379> GET todoCount[0;90;49m key[0m[29C[0K127.0.0.1:6379> GET todoCount[29C
+"1"
+127.0.0.1:6379> [0K127.0.0.1:6379> S[17C[0K127.0.0.1:6379> SE[18C[0K127.0.0.1:6379> SET[19C[0K127.0.0.1:6379> SET [0;90;49mkey value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-s[0m[20C[0K127.0.0.1:6379> SET t[0;90;49m key value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time[0m[21C[0K127.0.0.1:6379> SET to[0;90;49m key value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-tim[0m[22C[0K127.0.0.1:6379> SET tod[0;90;49m key value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-ti[0m[23C[0K127.0.0.1:6379> SET todo[0;90;49m key value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-t[0m[24C[0K127.0.0.1:6379> SET todoC[0;90;49m key value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-[0m[25C[0K127.0.0.1:6379> SET todoCo[0;90;49m key value [NX|XX] [GET] [EX seconds|PX millisecon
