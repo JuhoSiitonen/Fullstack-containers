@@ -19,12 +19,12 @@ services:
     command: ["redis-server", "--appendonly", "yes"] 
     volumes:
       - ./redis_data:/data
-  server:
+  todo-backend-dev:
     container_name: todo-backend-dev
     image: todo-backend-dev
     build:
       context: . 
-    command: ["npm", "run", "dev"]
+      dockerfile: dev.Dockerfile
     volumes:
       - ./:/usr/src/app
     ports:
