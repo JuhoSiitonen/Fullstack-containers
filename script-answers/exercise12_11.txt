@@ -17,4 +17,18 @@ OK
 "9001"
 127.0.0.1:6379> [0K127.0.0.1:6379> GET todoCount[0;90;49m key[0m[29C[0K127.0.0.1:6379> GET todoCount[29C
 "9002"
-127.0.0.1:6379> [0K127.0.0.1:6379> D[17C[0K127.0.0.1:6379> DE[18C[0K127.0.0.1:6379> DEL[
+127.0.0.1:6379> [0K127.0.0.1:6379> D[17C[0K127.0.0.1:6379> DE[18C[0K127.0.0.1:6379> DEL[19C[0K127.0.0.1:6379> DELE[20C[0K127.0.0.1:6379> DELET[21C[0K127.0.0.1:6379> DELETE[22C[0K127.0.0.1:6379> DELETE [23C[0K127.0.0.1:6379> DELETE t[24C[0K127.0.0.1:6379> DELETE to[25C[0K127.0.0.1:6379> DELETE tod[26C[0K127.0.0.1:6379> DELETE todo[27C[0K127.0.0.1:6379> DELETE todoC[28C[0K127.0.0.1:6379> DELETE todoCo[29C[0K127.0.0.1:6379> DELETE todoCou[30C[0K127.0.0.1:6379> DELETE todoCoun[31C[0K127.0.0.1:6379> DELETE todoCount[32C[0K127.0.0.1:6379> DELETE todoCount[32C
+(error) ERR unknown command 'DELETE', with args beginning with: 'todoCount' 
+127.0.0.1:6379> [0K127.0.0.1:6379> DELETE todoCount[32C[0K127.0.0.1:6379> DELETE todoCount[31C[0K127.0.0.1:6379> DELETE todoCount[30C[0K127.0.0.1:6379> DELETE todoCount[29C[0K127.0.0.1:6379> DELETE todoCount[28C[0K127.0.0.1:6379> DELETE todoCount[27C[0K127.0.0.1:6379> DELETE todoCount[26C[0K127.0.0.1:6379> DELETE todoCount[25C[0K127.0.0.1:6379> DELETE todoCount[24C[0K127.0.0.1:6379> DELETE todoCount[23C[0K127.0.0.1:6379> DELETE todoCount[22C[0K127.0.0.1:6379> DELET todoCount[21C[0K127.0.0.1:6379> DELE todoCount[20C[0K127.0.0.1:6379> DEL todoCount[0;90;49m key [key ...][0m[19C[0K127.0.0.1:6379> DEL todoCount[0;90;49m key [key ...][0m[29C[0K127.0.0.1:6379> DEL todoCount[29C
+(integer) 1
+127.0.0.1:6379> [0K127.0.0.1:6379> DEL todoCount[0;90;49m key [key ...][0m[29C[0K127.0.0.1:6379> DELETE todoCount[32C[0K127.0.0.1:6379> GET todoCount[0;90;49m key[0m[29C[0K127.0.0.1:6379> GET todoCount[29C
+(nil)
+127.0.0.1:6379> [0K127.0.0.1:6379> GET todoCount[0;90;49m key[0m[29C[0K127.0.0.1:6379> GET todoCount[29C
+"1"
+127.0.0.1:6379> [0K127.0.0.1:6379> e[17C[0K127.0.0.1:6379> ex[18C[0K127.0.0.1:6379> exi[19C[0K127.0.0.1:6379> exit[20C[0K127.0.0.1:6379> exit[20C
+[?2004hroot@349efd028b12:/data# exit
+[?2004lexit
+[?2004h]0;juho@JuhonAcer: ~/tehtavat/Fullstack-containers/todo-app/todo-backend[01;32mjuho@JuhonAcer[00m:[01;34m~/tehtavat/Fullstack-containers/todo-app/todo-backend[00m$ [?2004l
+exit
+
+Script done on 2023-12-22 03:39:59+02:00 [COMMAND_EXIT_CODE="0"]
