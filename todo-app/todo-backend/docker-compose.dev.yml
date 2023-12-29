@@ -19,7 +19,7 @@ services:
     command: ["redis-server", "--appendonly", "yes"] 
     volumes:
       - ./redis_data:/data
-  todo-backend-dev:
+  server:
     image: todo-backend-dev
     container_name: todo-backend-dev
     build:
