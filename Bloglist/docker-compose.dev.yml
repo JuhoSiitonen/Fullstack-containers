@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 3456:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: the_database
+    volumes: 
+      - ./backend/mongo_data:/data/db
+  server:
+    image: bloglist-backend-dev
+    container_name: bloglist-backend-dev
+    build:
+      context: ./backend/
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./backend/:/usr/src/app
+    ports:
+      - 3001:3001
+    environment:
+      - MONGODB_URI=mongodb://root:example@mongo:27017/
+      - TESTS_MONGODB_URI=mongodb://root:example@mongo:27017/
+      - SECRET="123456789"
+      - PORT=3001
+    depends_on:
+      - mongo
+  app:
+    image: frontend-dev
+    container_name: frontend-dev
+    build:
+      context: ./frontend/
+      dockerfile: dev.Dockerfile 
+    volumes:
+      - ./frontend/:/usr/src/app 
+    ports:
+      - 3000:3000
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:8080/api
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    depends_on:
+      - app
+      - server
